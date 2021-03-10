@@ -2,8 +2,8 @@
 const mysql = require('mysql');
 
 
-if (process.env.JAWSDB_url) {
-  connection = mysql.createConnection(process.env.JAWSDB_url)
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 
 const connection = mysql.createConnection({
@@ -14,6 +14,7 @@ const connection = mysql.createConnection({
   database: 'burgers_db',
 });
 };
+
 connection.connect((err) => {
   if (err) {
     console.error(`error connecting: ${err.stack}`);
